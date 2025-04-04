@@ -1,4 +1,4 @@
-// This file will house the piece interfaces that will be implemented later
+﻿// This file will house the piece interfaces that will be implemented later
 
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -31,7 +31,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("Pawn");
+            if (Color == Color.White)
+                Console.Write("\u2659");
+            else
+                Console.Write("\u265F");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -59,7 +62,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("Knight");
+            if (Color == Color.White) 
+                Console.Write("\u2658");
+            else
+                Console.Write("\u265E");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -87,7 +93,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("Bishop");
+            if (Color == Color.White)
+                Console.Write("\u2657");
+            else
+                Console.Write("\u265D");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -115,7 +124,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("Rook");
+            if (Color == Color.White)
+                Console.Write("\u2656");
+            else
+                Console.Write("\u265C");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -143,7 +155,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("Queen");
+            if (Color == Color.White)
+                Console.Write("\u2655");
+            else
+                Console.Write("\u265B");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -175,7 +190,10 @@ namespace Chess.Pieces
 
         public void PrintPiece()
         {
-            Console.WriteLine("King");
+            if (Color == Color.White)
+                Console.Write("\u2654");
+            else
+                Console.Write("\u265A");
         }
 
         public void TakePiece(IChessPiece piece)
