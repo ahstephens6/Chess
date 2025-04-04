@@ -3,12 +3,13 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 
-namespace Pieces
+namespace Chess.Pieces
 {
     public interface IChessPiece
     {
         public void Move(int x, int y);
         public void TakePiece(IChessPiece piece);
+        public void PrintPiece();
     }
 
     public class Pawn : IChessPiece
@@ -26,6 +27,11 @@ namespace Pieces
         public void Move(int x, int y)
         {
             Location.SetCoordinate(x, y);
+        }
+
+        public void PrintPiece()
+        {
+            Console.WriteLine("Pawn");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -51,6 +57,11 @@ namespace Pieces
             Location.SetCoordinate(x, y);
         }
 
+        public void PrintPiece()
+        {
+            Console.WriteLine("Knight");
+        }
+
         public void TakePiece(IChessPiece piece)
         {
 
@@ -72,6 +83,11 @@ namespace Pieces
         public void Move(int x, int y)
         {
             Location.SetCoordinate(x, y);
+        }
+
+        public void PrintPiece()
+        {
+            Console.WriteLine("Bishop");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -97,6 +113,11 @@ namespace Pieces
             Location.SetCoordinate(x, y);
         }
 
+        public void PrintPiece()
+        {
+            Console.WriteLine("Rook");
+        }
+
         public void TakePiece(IChessPiece piece)
         {
 
@@ -118,6 +139,11 @@ namespace Pieces
         public void Move(int x, int y)
         {
             Location.SetCoordinate(x, y);
+        }
+
+        public void PrintPiece()
+        {
+            Console.WriteLine("Queen");
         }
 
         public void TakePiece(IChessPiece piece)
@@ -147,6 +173,11 @@ namespace Pieces
             Location.SetCoordinate(x, y);
         }
 
+        public void PrintPiece()
+        {
+            Console.WriteLine("King");
+        }
+
         public void TakePiece(IChessPiece piece)
         {
 
@@ -173,6 +204,6 @@ namespace Pieces
         }
     }
 
-    public enum PieceType { Pawn=0, Rook, Knight, Bishop, Queen, King };
+    public enum PieceType { Pawn=0, Rook, Knight, Bishop, Queen, King, Empty };
     public enum Color { White=0, Black };
 }
